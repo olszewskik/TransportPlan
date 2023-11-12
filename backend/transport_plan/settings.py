@@ -37,9 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     "transport.apps.TransportConfig",
-    "user.apps.UserConfig"
+    "user.apps.UserConfig",
 ]
 
 MIDDLEWARE = [
@@ -83,7 +82,7 @@ DATABASES = {
         "USER": "transportplandb",
         "PASSWORD": "TransportPlanDb",
         "HOST": "localhost",
-        "PORT": "5432"
+        "PORT": "5432",
     }
 }
 
