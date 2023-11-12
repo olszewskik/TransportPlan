@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "transport.apps.TransportConfig",
+    "user.apps.UserConfig"
 ]
 
 MIDDLEWARE = [
@@ -75,8 +78,12 @@ WSGI_APPLICATION = "transport_plan.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "TransportPlan",
+        "USER": "transportplandb",
+        "PASSWORD": "TransportPlanDb",
+        "HOST": "localhost",
+        "PORT": "5432"
     }
 }
 
