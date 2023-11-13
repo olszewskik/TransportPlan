@@ -23,6 +23,8 @@ class Transport(models.Model):
     date = models.DateField()
     time = models.TimeField()
     carrier = models.ForeignKey(Carrier, on_delete=models.CASCADE)
+    driver = models.CharField(max_length=100, null=True)
+    license_plate = models.CharField(max_length=100, null=True)
 
     description = models.TextField()
 
